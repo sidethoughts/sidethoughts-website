@@ -4,7 +4,7 @@
     margin: 0;
     display: grid;
     grid-template-columns: 20% 1fr 20%;
-    grid-template-rows: 163px 1fr 100px;
+    grid-template-rows: 163px 1fr auto;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     min-height: calc(100vh - 20px);

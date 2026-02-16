@@ -11,35 +11,43 @@
 }
 */
 
-ul{
+ul {
     margin: 0 !important;
     padding: 20px !important;
 }
 
-.m0{
+.m0 {
     margin: 0 !important;
 }
-.mb0{
-     margin-bottom: 0;
+
+.mb0 {
+    margin-bottom: 0;
 }
 
-.mt-1{
+.mt-1 {
     margin-top: -5px;
 }
-.mtb1{
-    margin:5px 0;
+
+.m2 {
+    margin: 10px;
 }
-.mtb2{
+
+.mtb1 {
+    margin: 5px 0;
+}
+
+.mtb2 {
     margin: 10px 0;
 }
 
-.p2{
+.p2 {
     padding: 10px;
 }
 
-.pl3{
+.pl3 {
     padding-left: 15px !important;
 }
-.mt-5{
+
+.mt-5 {
     margin-top: -25px;
 }

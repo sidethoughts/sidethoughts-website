@@ -1,0 +1,21 @@
+
+a, a:visited{
+  color: black;
+  transition: all 0.2s;
+}
+a:hover{
+  color: rgb(255, 106, 0);
+}
+
+.underline{
+  text-decoration: underline;
+}
+.under-over-line{
+  text-decoration: underline overline;
+}
+
+.icon{
+  font-size: 15px;
+}
+
+

@@ -1,0 +1,68 @@
+:root{
+  --foreground: #3D4252;
+  --background: aliceblue;
+}
+
+.color-show{
+  position: relative;
+}
+
+.color-show:after{
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 24.1px;
+}
+
+.color0::after{
+  background: var(--color0);
+}
+.color1::after{
+  background: var(--color1);
+}
+.color2::after{
+  background: var(--color2);
+}
+.color3::after{
+  background: var(--color3);
+}
+.color4::after{
+  background: var(--color4);
+}
+.color5::after{
+  background: var(--color5);
+}
+.color6::after{
+  background: var(--color6);
+}
+.color7::after{
+  background: var(--color7);
+}
+.color8::after{
+  background: var(--color8);
+}
+.color9::after{
+  background: var(--color9);
+}
+.color10::after{
+  background: var(--color10);
+}
+.color11::after{
+  background: var(--color11);
+}
+.color12::after{
+  background: var(--color12);
+}
+.color13::after{
+  background: var(--color13);
+}
+.color14::after{
+  background: var(--color14);
+}
+.color15::after{
+  background: var(--color15);
+}
+
+
+
+

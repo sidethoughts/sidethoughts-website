@@ -1,0 +1,60 @@
+/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
+   HTML content. To learn how to do something, just try searching Google for questions like
+   "how to change link color." */
+
+@import url('/assets/css/colors.css');
+@import url('/assets/css/typography.css');
+@import url('/assets/css/layout.css');
+@import url('/assets/css/file.css');
+@import url('/assets/css/spacing.css');
+@import url('/assets/css/nav_responsive.css');
+
+
+@font-face {
+  font-family: 'robotoMonoNerd';
+  src: url('/assets/font/RobotoMonoNerdFont-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  /*padding: 5px;
+  margin: 5px;*/
+  height: min-content;
+}
+
+
+head,
+script,
+style {
+  display: none;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: robotoMonoNerd;
+  margin: 0 auto;
+}
+
+.border-none {
+  border: none;
+}
+
+.border {
+  border: 3px solid var(--foreground);
+}
+html {
+  padding:0 2px;
+  margin: 0;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+

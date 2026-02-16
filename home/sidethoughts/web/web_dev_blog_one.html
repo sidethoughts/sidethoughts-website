@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sidethoughts Space</title>
+  <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+</head>
+
+<body id="top">
+  <header class="p2 small-nav">
+    <h1>/web_dev_<wbr>blog_one.html</h1>
+    <p class="file-item-date mb0 mt-5">last modified: 2026.02.16</p>
+    <p class="file-path">
+      <a href="/">/</a>
+      <a href="/home/">home</a> /
+      <a href="/home/sidethoughts/">sidethoughts</a> /
+      <a href="/home/sidethoughts/web/">web</a> /
+      <a href="/home/sidethoughts/web/web_dev_blog_one.html">web_dev_blog_one.html</a>
+    </p>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="/home/sidethoughts/web/">close</a></li>
+    </ul>
+  </nav>
+  <main>
+    <h2>my current state of the website</h2>
+    <p>
+      in the current way, i think i like where my website is evolving and i think i narrowed down some principles about
+      my blog, which i want to share.
+    </p>
+    <h3>minimalistic but creative</h3>
+    <p>
+      first of all i want it to be minimalistic. i don`t want it to be overloaded like many websites in the current
+      internet are, but that`s another topic for it`s self. on the other hand i want this website also to be a creative
+      project for me. i want to tinker and experiment with the design and code. but i will try to keep the balance. on
+      the one hand minimalism and creativity on the other hand.
+    </p>
+    <h3>my code, my freedom</h3>
+    <p>
+      i also want the website to be mine. to be my project. so i will try to copy as less as possible. normaly at the
+      start of a new web-project, the first thing i will do is installing bootstrap, the most popular css framework. at
+      the beginning of this website i really asked myself: do i wanna use bootstrap? but shortly after that i started to
+      realise: do i really need it? it is worth the code bloat that comes with it? and perhaps the most important
+      question: do i want to use these predefined classes and layouts? i like bootstrap, don`t get me wrong. it is so
+      easy to build nice and responsive websites with it, but the reason why i don`t want to use it on this website is:
+      it leads to a lack of creative freedom and i don`t want it. so i don`t want to use it, as well as any other kind
+      of framework or template builder. i want most of the code to be written directly by me, not to be copied from a
+      framework or codepen or something like that.
+    </p>
+    <h3>(independent) design and border madness</h3>
+    <p>
+      with the design i want to be independent as well. but to be honest i a good designer, i am more a coder, so i have
+      to look for inspiration on other websites. one website that inspired me for my first draft was <a
+        href="https://suboptimalism.neocities.org/">suboptimalism<span class="icon"></span></a> cause i really like
+      this style. this visible borders reminds me a bit of neo brutalism web design. so i wanted to try it by myself and
+      really overshot it. i made a border for every visible element and i think it was just too much. although i also
+      believe that the generall idea was not that bad. but then instead of experimenting with borders, i completely
+      turned them off. maybee i will give them a second try in some time.
+    </p>
+    <h3>unique spin and linux vibes</h3>
+    <p>
+      one thing that i want to achieve with my design for this website is to have a creative and unique spin to it. i
+      came up with the idea of a kind of linux home file managment as my navigation. I then thought why not building the
+      website completely to kind of mimic a file manager, so i did it and i really like how its turned out. after that i
+      found <a href="https://wiredphantom.neocities.org/navi">wiredphantom<span class="icon"></span></a> and thought:
+      ok my idea was not that unique as i thought, but wiredphantom has a very diffrent approach to it than my site, so
+      i think it`s okay. by the way i also very much like the idea and the implementation of wiredphantom.
+    </p>
+    <p>
+      so i really like the idea of this linux file manager vibe. on the other hand i am quite not sure if it`s
+      userfriendly enough, but i think at the moment it is ok.
+    </p>
+    <h3>copy-and-paste-hell and one way to reduce it</h3>
+    <p>
+      nevertheless it also made me a bit of headache at some point, because i have a bit more html-files than usual,
+      especially for the start of a website. this is not a big problem but especially at the beginning where the whole
+      structure and code of the website is not finished and changes frequently it is a bit annoying. particularly if you
+      just copy the exact code from one place to 5 different files.
+    </p>
+    <p>
+      for example my left side-navigation, if i were coding in php or with javascript, i would have created a module for
+      this, to only have to maintain it in one place or file, but in html there is no module feature yet. therefore, i
+      decided to write a bash script to automate or mimic this.
+    </p>
+    <p>
+      it is really just a small script, still now i can use kind of html-modules. in a html file for example i now can
+      write "@include-nav.html" and this bash script will then look for nav.html in my modules directory and will copy
+      the code to this exact place. and it does that not for a single file, it checks all of my html-files in a
+      specified directory. it also copies all the files to a separate directory with the right modules attached. so in
+      the end i have a directory with html files i can use and upload alongside a working directory where i can work
+      with html modules. i will not get into the details, cause i plan to upload the script to github and link it on my
+      website, as well as i want to share the whole source code on github. it now saves me a lot of headaches and time,
+      even though i am just using it for two modules yet.
+    </p>
+    <h3>javascript and the magic of css</h3>
+    <p>
+      but as i said i currently don`t want to use javascript on this website at all. to keep things simple and
+      minimalistic. i also want to make it a bit of a challenge for me. with css and html there is so much you can do.
+      more than you would think of. for example i most recently added a responsive navigation menu for mobile devices,
+      which you can open and close via a so called hamburger menu (the tree bars). normally it would be very easy to do
+      with javascript. you just add some javascript lines which toggles certain classes on the navigation elements.
+      thats it. but without javascript it is getting a bit tricky, but not impossible. it envolves a little trick with
+      the input type checkbox and some smart css selectors. but i won`t get into details here either, because it would
+      be too much for this post. if you wanna know how it`s done, i may write a web dev blog post about it. i just wanna
+      to give you an example of stuff you can do by just using html and css. for more examples i would recommend to you
+      to look at the <a href="https://100dayscss.com/">100 days css challenge<span class="icon"></span></a>. it`s a
+      website that gives you 100 challenges to recreate but only with html and css. even though many people use a bit of
+      javascript as well, you could do it without javascript at all.
+    </p>
+    <p>
+      i also want to avoid javascript because there are people who disable javascript in there browsers, because of
+      different reasons. mainly because of privacy concerns. and even though i am not doing it, i can relate to it. so i
+      want to create a website that is exactly the same even if you decide to turn of javascript. and to give the
+      shoutout i think it was <a href="https://eldritchdata.neocities.org/">eldritchdata<span class="icon"></span></a>
+      that inspired me to this. a website that you only can read if you disable javascript. i did not read that much yet
+      from this site yet, but i definitely want to look closer at the guides.
+    </p>
+    <p>so i think thats it for the moment. </p>
+  </main>
+  <aside>
+  </aside>
+  <footer class="p2">
+    <a href="#top">to the top</a>
+  </footer>
+</body>
+
+</html>

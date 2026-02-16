@@ -57,4 +57,12 @@ html {
   display: inline-block;
 }
 
-
+footer{
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width: 900px) {
+  footer {
+    flex-direction: column;
+  }
+}

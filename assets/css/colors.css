@@ -1,6 +1,7 @@
 :root{
   --foreground: #3D4252;
   --background: aliceblue;
+  --link-color: coral;
 }
 
 .color-show{

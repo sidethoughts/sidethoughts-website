@@ -2,16 +2,19 @@
 a, a:visited{
   color: var(--foreground);
   transition: all 0.2s;
+  line-height: normal;
 }
 a:hover{
   color: var(--link-color);
 }
-
 .underline{
   text-decoration: underline;
 }
 .under-over-line{
   text-decoration: underline overline;
+}
+p{
+  line-height: 1.5;
 }
 .text-center{
   text-align: center;

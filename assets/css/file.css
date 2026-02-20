@@ -12,3 +12,6 @@
 .file-item-path{
     font-size: 0.85em;
 }
+.file-item p {
+    line-height: normal;
+}

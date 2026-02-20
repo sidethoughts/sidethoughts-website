@@ -16,10 +16,16 @@ a:hover{
 p{
   line-height: 1.5;
 }
+.long-text{
+  font-family: OpenDyslexic;
+}
 .text-center{
   text-align: center;
 }
 /*icons*/
+span::after{
+  font-family: robotoMonoNerd;
+}
 .external::after{
   content: " ";
   font-size: 15px;

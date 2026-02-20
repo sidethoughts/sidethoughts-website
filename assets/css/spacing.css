@@ -23,6 +23,9 @@ ul {
 .mb0 {
     margin-bottom: 0;
 }
+.pb1{
+    padding-bottom: 5px;
+}
 
 .mt-1 {
     margin-top: -5px;

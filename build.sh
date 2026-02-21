@@ -15,11 +15,10 @@ srcDir="$ROOT_DIR/src/" # dist folder
 if [[ -e $distDir ]]; then 
     rm -rf $distDir #remove build DIR if exists
     echo "removed old"
+fi
     mkdir $distDir
     cp -r $srcDir/* $distDir
     echo "copied from src to dir"
-fi
-
 #checks all modules files for modules as well and copy them to the build directory
 check_modules() { 
 

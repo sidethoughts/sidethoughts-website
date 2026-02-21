@@ -94,20 +94,14 @@ replace_html_module_file() {
         echo "Directory '$5' already exists."
     fi    
       
-    #check if file ($4) exits already then read and write in this exact file
-    if [[ -e $4 ]]; then # if exist then
-        echo "overwriting because file exists"
-        sed -i "\,$1,r $2" "$4"
-    else # if not then copy html with module in new file
-    echo $3
-        sed "\,$1,r $2" "$3" > "$4"
-        echo "file created"
-        echo "$1"
-
-    fi
+    #overwriting file with he module included
+    echo "overwriting because file exists"
+    sed -i "\,$1,r $2" "$4"
+    
 
     #remove @include in this file
     sed -i "\,$1,d" "$4"
+
 }
 
 format() {

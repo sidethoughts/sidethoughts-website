@@ -1,0 +1,39 @@
+name: build and deploy website to neocities
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install js-beautify
+        run: npm install js-beautify
+
+      - name: Make build script executable
+        run: chmod +x build.sh
+
+      - name: Run build script
+        run: ./build.sh
+
+      - name: Deploy to neocities
+        uses: bcomnes/deploy-to-neocities@v3
+        with:
+          api_key: ${{ secrets.NEOCITIES_API_TOKEN }}
+          cleanup: false # #If true, deploy-to-neocities will destructively delete files found on Neocities not found in your dist_dir
+          dist_dir: dist/website
+          neocities_supporter: false # set this to true if you have a supporter account and want to bypass unsuported files filter.
+          preview_before_deploy: true # print a deployment plan prior to waiting for files to upload.
+     

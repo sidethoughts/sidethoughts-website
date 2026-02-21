@@ -1,5 +1,6 @@
 #!/bin/bash
 
+set -o pipefail
 #config
 ROOT_DIR=$(pwd)
 htmlFolder="$ROOT_DIR/src/website/" # folder where the html-files are saved with @includes inside
@@ -114,7 +115,6 @@ format() {
     for i in "${filesArray[@]}"; do
         npx js-beautify $i --type html --replace --indent-size 2 --max-preserve-newlines 0
     done
-    npx js-beautify $ROOT_DIR/index.html --type html --replace --indent-size 2 --max-preserve-newlines 0
 }
 
 check_modules

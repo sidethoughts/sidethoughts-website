@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>sidethoughts Space</title>
-  <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+ <link href="/usr/share/themes/style.css" rel="stylesheet" type="text/css" media="all">
 </head>
 
 <body id="top">
@@ -69,12 +69,15 @@
       journey blogs) i also found a website or to say better three websites i really like and they made me really
       laugh. maybee you will like them also. it is kind of a series of the same idea. but small content note it
       includes a lot of swearwords:</p>
-    <p><a href="http://motherfuckingwebsite.com/">this is a motherfucking website
-        <span class="external aria-hidden"></span><span class="zero">external link icon</span> </a><br>
-      <a href="http://bettermotherfuckingwebsite.com/">this is a better motherfucking website
-        <span class="external aria-hidden"></span><span class="zero">external link icon</span> </a><br>
+    <p><a href="http://motherfuckingwebsite.com/">this is a motherfucking website 
+      @include-icon/external.html
+    </a><br>
+      <a href="http://bettermotherfuckingwebsite.com/">this is a better motherfucking website 
+        @include-icon/external.html
+      </a><br>
       <a href="http://bestmotherfucking.website/">this is the best motherfucking websites
-        <span class="external aria-hidden"></span><span class="zero">external link icon</span> </a>
+        @include-icon/external.html
+      </a>
     </p>
     <p>ok i think this is all i have time for today. i really like the idea of just writing and not overthink it, so
       hopefully i can put this post online today. fyi: i am currently on my way back to my hometown from my
@@ -86,24 +89,7 @@
   </main>
   <aside>
   </aside>
-  <footer class="p2 m2">
-    <div class="links">
-      <a href="#top" class="p2">to the top</a>
-      <a href="https://github.com/sidethoughts" class="p2">github
-        <span class="external aria-hidden"></span><span class="zero">external link icon</span><span class="github aria-hidden"></span><span class="zero"> github icon</span> </a>
-      <span class="p2">contact me by mail at <a href="maitto:mail@sidethoughts.org">mail@sidethoughts.org
-          <span class="mail aria-hidden"></span><span class="zero"> mail icon</span> </a></span>
-    </div>
-    <div>
-      <p class="text-center m0">
-        this website has no cookies, no javascript-code and no fetches from external sources!
-      </p>
-      <p class="text-center m0">
-        every external link should be marked with
-        <span class="external aria-hidden"></span><span class="zero">external link icon</span>
-      </p>
-    </div>
-  </footer>
+  @include-footer.html
 </body>
 
 </html>

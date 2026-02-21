@@ -2,23 +2,23 @@
    HTML content. To learn how to do something, just try searching Google for questions like
    "how to change link color." */
 
-@import url('/assets/css/colors.css');
-@import url('/assets/css/typography.css');
-@import url('/assets/css/layout.css');
-@import url('/assets/css/file.css');
-@import url('/assets/css/spacing.css');
-@import url('/assets/css/nav_responsive.css');
+@import url('./css/colors.css');
+@import url('./css/typography.css');
+@import url('./css/layout.css');
+@import url('./css/file.css');
+@import url('./css/spacing.css');
+@import url('./css/nav_responsive.css');
 
 
 @font-face {
   font-family: 'robotoMonoNerd';
-  src: url('/assets/font/RobotoMonoNerdFont-Regular.ttf') format('truetype');
+  src: url('./font/RobotoMonoNerdFont-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'OpenDyslexic';
-  src: url('/assets/font/OpenDyslexicMono-Regular.otf') format('opentype');
+  src: url('./font/OpenDyslexicMono-Regular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }

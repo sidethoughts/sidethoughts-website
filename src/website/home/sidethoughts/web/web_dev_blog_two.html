@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sidethoughts Space</title>
+  <link href="/usr/share/themes/style.css" rel="stylesheet" type="text/css" media="all">
+</head>
+
+<body id="top">
+  <header class="p2 small-nav">
+    <h1>/web_dev_<wbr>blog_one.html</h1>
+    <p class="file-item-date mb0 mt-5">last modified: 2026.02.21</p>
+    <p class="file-path">
+      <a href="/" aria-label="landingpage">/</a>
+      <a href="/home/">home</a> /
+      <a href="/home/sidethoughts/">sidethoughts</a> /
+      <a href="/home/sidethoughts/web/">web</a> /
+      <a href="/home/sidethoughts/web/web_dev_blog_two.html">web_dev_blog_two.html</a>
+    </p>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="/home/sidethoughts/web/">close</a></li>
+    </ul>
+  </nav>
+  <main class="long-text">
+    <h2>some changes, visible and not visible </h2>
+    <p>
+      this is part two of my web dev blogs. so if you have not read <a
+        href="/home/sidethoughts/web/web_dev_blog_one">web_dev_blog_one.html</a> i would highly recommand it to you
+      because it is a follow-up-post, and i will reference things from the part one.
+    </p>
+    <p>
+      in the last couple of days i changed a lot on my website, but more stuff in the background and workflow. so most
+      of the changes are not visible for you, except for the elephant in the room: my color switch, but i will get to
+      this later on.
+    </p>
+    <h3>accessibility</h3>
+    <p>
+      first of all in my last web dev blog i forgot one
+      important principle: web accessibility. of course this is also an aspect that is important to me, to make the web
+      inclusive.
+      so first i checked how my website currently is in regards to accessibility. i did it with the browser-extension <a
+        href="https://silktide.com/toolbar/">silktide accessibility checker</a>
+      @include-icon/external.html
+      which i found on the <a href="https://www.a11yproject.com/resources/#browser-extensions"> resources page</a>
+      @include-icon/external.html
+      from <a href="https://www.a11yproject.com/">the a11y project</a>
+      @include-icon/external.html
+      and it was okay for the start, but not perfect, if a website even can be perfectly accessible.
+    </p>
+    <h3>icons</h3>
+    <p>
+      the first thing i improved was the icons. currently i am using icons to display that a link is an external link
+      and in some cases also to which website it is linking. by the way i am doing this to make clear whenever you are
+      leaving my
+      website. not because i don`t want you to check out other stuff. i want you to do exactly this, but i want to make
+      clear that i cannot assure that your privacy is handled safely on other websites, especially on commercial
+      website. the first approach of this was not very
+      accessibility friendly for screen readers. so now i ended up creating two span elements for the icons. one with
+      the icon inside, which is hidden for screen
+      reader via aria-hidden. the other one has a text in it which describes the icon. this one got a font-size of zero
+      to only be visible for the screen reader. i only tested it with the built-in screen reader in the
+      browser-extension i already talked about. so at the moment i hope it is fine for other screen readers as well.
+    </p>
+    <h3>label issues</h3>
+    <p>
+      next i fixed some label issues. the obvious one of course was the input button for my responsive navigation menu.
+      but there also were some issues with my link labeling. in most of the pages due to my design that mimics a linux
+      file system there are links which just say "/". obviously the extension won`t know why i have links like that on
+      my
+      page. to fix this i added an aria-label to it.
+    </p>
+    <h3>html-semantic</h3>
+    <p>
+      i also found some minor semantic problems, which i mostly fixed. i usually try to make my html as semantically
+      correct
+      as possible, at least according to the basic requirements. but i still have some semantic issues i need to fix.
+      but all headlines should be semantically correct and i try to not overuse div-elemnts. in the future i should also
+      work on stuff like using the article-element, which i currently don`t use at all. but for this i need to read more
+      about
+      the correct semantic of a website. i also need to improve my website titles. at the moment there are all the same
+      which isn`t that good.
+    </p>
+    <h3>readability</h3>
+    <p>
+      after that i added a line-height of 1.5 to all p-elements (paragraph) to ensure better readability. for an even
+      better
+      readability i also changed the font on long texts to <a href="https://opendyslexic.org/">opendyslexic</a>
+      @include-icon/external.html
+      in the mono variant. opendyslexic is an open source font, which increases readability especially for readers with
+      dyslexia, but i think it improves readability in generell and i think this is more important than design.
+    </p>
+    <h3>design improvements</h3>
+    <p>
+      other than the accessibility features i also did some minor improvements to the design. first of all i switch my
+      color theme from a light theme to a dark. i am basically using the same colors like i did before but each
+      exchanged with each other.
+      and i also improved the hover-link-color for a slightly different orange. in addition to that i
+      also added an option in my files module to move on up in the file-hierarchie. so now you can also go directly to
+      the parent directory. other than that i only did some minor changes.
+    </p>
+    <h3>open source the source code</h3>
+    <p>
+      last but not least i changed my "workflow", or to better say my way of uploading my files to neocities,
+      completely.
+      at my last web_dev_blog i mentioned that i want to upload my source code to github, but to be excact correct i did
+      not do
+      this until today. i started a github repository, but i uploaded my website code after it was build by my bash
+      script. yesterday and today i decided to change that because of two reasons.
+    <p>
+      first i wanna show you my real source code so that you can see my way of working with modules.<br /> secondly i
+      also thought
+      about why did i saved the files in git in the first place. to version it, to source control it and also to back up
+      it. so than i should upload the source code and not the build files.
+    </p>
+    <h3>my new github workflow</h3>
+    <p>
+      i also stumbled about the idea of using
+      github actions to deploy to code directly to neocities. so this morning i completly change my file structure to
+      upload the source code. then i also edit my building prozess (build.sh) to the correct directory paths and change
+      some small issues for the deployment pipeline. if you want to know more about github actions in generell you can
+      look it up in <a
+        href="https://github.blog/enterprise-software/ci-cd/build-ci-cd-pipeline-github-actions-four-steps/">github`s
+        blog</a>
+      @include-icon/github.html
+      . to summarize the result of the github deployment for my website very quickly: now whenever i change a file in my
+      <a href="https://github.com/sidethoughts/sidethoughts-website">website github repository </a>
+      @include-icon/github.html
+      a so called github workflow is automatically triggered. this workflow builds my html files with my bash-script
+      and upload these files directly to neocities. for this it uses the <a
+        href="https://github.com/bcomnes/deploy-to-neocities">deploy-to-neocities</a>
+      @include-icon/github.html
+      action from <a href="https://github.com/bcomnes">bcomnes</a>
+      @include-icon/github.html
+      .
+    </p>
+    <p>
+      maybee i have overcomplicated it. i mean it kind of gets in conflict with my minimalistic approach, but on the
+      other hand it is now so much easier and faster.
+
+    </p>
+    <h3>shell-html-builder</h3>
+    <p>
+      in my shell-html-builder i also made some changes before that. i now can use modules inside of modules, which i
+      currently use for icons and i also fixed some minor bugs in the script.
+    </p>
+    <p>
+      yeah, i think these should be all the main changes i did in the last couple of days
+    </p>
+  </main>
+  <aside>
+  </aside>
+  @include-footer.html
+</body>
+
+</html>

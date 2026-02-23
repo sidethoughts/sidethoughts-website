@@ -10,15 +10,6 @@ newModulesFolder="$ROOT_DIR/dist/modules/" # folder where the modules files are 
 distDir="$ROOT_DIR/dist/" # dist folder
 srcDir="$ROOT_DIR/src/" # dist folder
 
-# @TODO refactor: now that at the beginning the scr dir is completle copied to dist everything could be edited in the dist dir directly
-
-if [[ -e $distDir ]]; then 
-    rm -rf $distDir #remove build DIR if exists
-    echo "removed old"
-fi
-    mkdir $distDir
-    cp -r $srcDir/* $distDir
-    echo "copied from src to dir"
 #checks all modules files for modules as well and copy them to the build directory
 check_modules() { 
 
@@ -110,6 +101,33 @@ format() {
     done
 }
 
+devMode=0 #mode where html get not formated
+
+# @TODO refactor: now that at the beginning the scr dir is completle copied to dist everything could be edited in the dist dir directly
+if [[ -e $distDir ]]; then 
+    rm -rf $distDir #remove build DIR if exists
+    echo "removed old"
+fi
+
+mkdir $distDir
+cp -r $srcDir/* $distDir
+echo "copied from src to dir"
+
+for arg in "$@"; do
+    echo " flag $arg found"
+    case $arg in
+        -d )
+        devMode=1
+            ;;
+        *)
+        echo "no flag"
+        ;;
+    esac
+done
+
+
 check_modules
 find_html_files
-format
+if [  $devMode -eq 0 ]; then
+    format
+fi

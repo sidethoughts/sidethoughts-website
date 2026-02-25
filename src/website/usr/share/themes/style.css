@@ -73,3 +73,17 @@ html {
 .zero{
   font-size: 0;
 }
+
+.top-picks ul{
+  padding: 0 !important;
+}
+.stamp-collection img{
+  width: 88px;
+  height: 31px;
+  object-fit: cover;
+}
+.stamp-collection ul{
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}

@@ -47,12 +47,7 @@ p{
   content: " ";
   font-size: 15px;
 }
-.imdb::after{
-  content: "";
-  position: absolute;
-  font-size: 30px;
-  top: -7px;
-  left: 10px;
-  height: 5px !important;
-  display: inline-block;
+.wikipedia::after{
+  content: " ";
+  font-size: 15px;
 }

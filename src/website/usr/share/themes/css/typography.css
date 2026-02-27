@@ -25,10 +25,10 @@ p{
 /*icons*/
 .icon::after{
   font-family: robotoMonoNerd;
+  font-size: 15px;
 }
 .external::after{
   content: " ";
-  font-size: 15px;
 }
 .mail{
   position: relative;
@@ -41,13 +41,48 @@ p{
 }
 .github::after{
   content: " ";
-  font-size: 15px;
 }
 .youtube::after{
   content: " ";
-  font-size: 15px;
 }
 .wikipedia::after{
   content: " ";
-  font-size: 15px;
 }
+.arch::after{
+  content: " 󰣇";
+}
+.mint::after{
+  content: " 󰣭";
+}
+.fedora::after{
+  content: " ";
+}
+.debian::after{
+  content: " ";
+}
+.ubuntu::after{
+  content: " ";
+}
+.gentoo::after{
+  content: " ";
+}
+.garuda::after{
+  content: " ";
+}
+.kde::after{
+  content: " ";
+}
+.endeavouros::after{
+  content: " ";
+}
+.xfce::after{
+  content: " ";
+}
+.gnome::after{
+  content: " ";
+}
+.reddit::after{
+  content: " ";
+}
+
+

@@ -23,7 +23,7 @@ jobs:
         run: npm install js-beautify
 
       - name: Make build script executable
-        run: chmod +x text.sh
+        run: chmod +x test.sh
 
       - name: Run build script
         run: ./test.sh

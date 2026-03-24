@@ -1,0 +1,30 @@
+name: build and deploy website to neocities
+
+on:
+  push:
+    branches:
+      - pipeline-test
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install js-beautify
+        run: npm install js-beautify
+
+      - name: Make build script executable
+        run: chmod +x text.sh
+
+      - name: Run build script
+        run: ./test.sh
+     

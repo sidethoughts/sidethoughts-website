@@ -13,6 +13,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -21,6 +23,12 @@ jobs:
 
       - name: Install js-beautify
         run: npm install js-beautify
+
+      - name: Make buildfilesystem script executable
+        run: chmod +x buildfilesystem.sh
+
+      - name: Run buildfilesystem script
+        run: ./buildfilesystem.sh
 
       - name: Make build script executable
         run: chmod +x build.sh

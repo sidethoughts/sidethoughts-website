@@ -1,0 +1,45 @@
+name: build and deploy website to neocities
+
+on:
+  push:
+    branches:
+      - stage
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install js-beautify
+        run: npm install js-beautify
+
+      - name: Make buildfilesystem script executable
+        run: chmod +x buildfilesystem.sh
+
+      - name: Run buildfilesystem script
+        run: ./buildfilesystem.sh
+
+      - name: Make build script executable
+        run: chmod +x build.sh
+
+      - name: Run build script
+        run: ./build.sh
+
+      - name: Deploy to stage
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: dist/website/

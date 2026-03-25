@@ -60,8 +60,14 @@ find_in_file() {
                 echo "module exist"
                 replace_html_module_file $include "$4$moduleName" $1 $3$fileScr "$3$fileDir"
             else
-                echo file does not exist
+                if [[ "$moduleName" == *"filemanagment"* ]]; then
+                    replace_html_module_file $include "$4$moduleName" $1 $3$fileScr "$3$fileDir"
+                    $include "$4$moduleName" $1 $3$fileScr "$3$fileDir"
+                else
+                    echo "Word not found in $moduleName"
+                fi
             fi
+            
         else
             echo "empty"
         fi
@@ -104,14 +110,14 @@ format() {
 devMode=0 #mode where html get not formated
 
 # @TODO refactor: now that at the beginning the scr dir is completle copied to dist everything could be edited in the dist dir directly
-if [[ -e $distDir ]]; then 
-    rm -rf $distDir #remove build DIR if exists
-    echo "removed old"
-fi
+# if [[ -e $distDir ]]; then 
+#     rm -rf $distDir #remove build DIR if exists
+#     echo "removed old"
+# fi
 
-mkdir $distDir
-cp -r $srcDir/* $distDir
-echo "copied from src to dir"
+# mkdir $distDir
+# cp -r $srcDir/* $distDir
+# echo "copied from src to dir"
 
 for arg in "$@"; do
     echo " flag $arg found"
